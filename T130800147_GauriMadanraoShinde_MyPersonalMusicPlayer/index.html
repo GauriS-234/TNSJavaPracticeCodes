@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/5de7227a88.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <h1> ⭐Personal Beats⭐</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search songs...">
+            <button id="voiceSearch"><i class="fa fa-microphone"></i></button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <aside>
+            <h2>Favorites</h2>
+            <ul id="favoritesList"></ul>
+            <h2>Recently Played</h2>
+            <ul id="recentlyPlayedList"></ul>
+        </aside>
+
+        <main>
+            <h2>Playlist</h2>
+            <div id="playlist" class="playlist"></div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="now-playing">
+            <img id="nowPlayingCover" src="" alt="">
+            <div class="now-playing-details">
+                <p id="nowPlayingTitle">No song playing</p>
+                <p><span id="currentTime">0:00</span> / <span id="totalDuration">0:00</span></p>
+            </div>
+        </div>
+
+        <input type="range" id="progressBar" min="0" value="0">
+
+        <div class="controls">
+            <button id="prev"><i class="fa fa-backward"></i></button>
+            <button id="playPause"><i class="fa fa-play"></i></button>
+            <button id="next"><i class="fa fa-forward"></i></button>
+            <button id="shuffle"><i class="fa fa-random"></i></button>
+            <button id="repeat"><i class="fa fa-redo"></i></button>
+        </div>
+
+        <div class="volume-control">
+            <i class="fa fa-volume-up"></i>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.01">
+        </div>
+    </footer>
+</body>
+</html>
